@@ -19,6 +19,7 @@
 .env.production.local
 
 # Ignore the .env file in server directory
+.env
 server/.env
 
 npm-debug.log*
