@@ -6,4 +6,6 @@ const password = process.env.PASSWORD;
 
 const MONGODB_URL = `mongodb+srv://${username}:${password}@connecthub.xoa3wfo.mongodb.net/?retryWrites=true&w=majority`;
 
+
+
 module.exports = MONGODB_URL;
