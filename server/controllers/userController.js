@@ -10,7 +10,6 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   //POST request
   createUser: async (req, res) => {
-    console.log(req.body);
     const user = new User(req.body);
     try {
       await user.save();
@@ -19,7 +18,7 @@ module.exports = {
       });
     } catch (err) {
       return res.status(400).json({
-        // error: errorHandler.getErrorMessage(err),
+        error: errorHandler.getErrorMessage(err),
       });
     }
   },

@@ -11,13 +11,13 @@ router.post("/api/users", userController.createUser);
 router.get("/api/users", userController.findAll);
 
 // Find user by ID
-router.get("/api/users:id", userController.findByID);
+router.get("/api/users/:id", userController.findByID);
 
 // Update user
-router.put("/api/users:id", userController.updateUser);
+router.put("/api/users/:id", userController.updateUser);
 
 // Delete user
-router.delete("/api/users:id", userController.deleteUser);
+router.delete("/api/users/:id", userController.deleteUser);
 
 // User authentication routes
 router.post("/signin", userController.userSignIn);
