@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({ massage: " Welcome to ConnectHub!" });
+  res.json({ message: " Welcome to ConnectHub!" });
 });
 // Connect to MongoDB
 mongoose
@@ -22,7 +22,7 @@ mongoose
 
 //Use user routes
 app.use("/", userRoutes);
-// app.use("/auth", userRoutes);
+app.use("/auth", userRoutes);
 
 const PORT = process.env.PORT || 3000;
 
