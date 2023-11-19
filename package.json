@@ -1,0 +1,16 @@
+{
+  "name": "connect-hub",
+  "version": "1.0.0",
+  "description": "> [!WARNING]\r > Please do not develop features in main branch!<br />\r > Please install dependencies/library under client orserver folder you are working on.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:client": "react-scripts start",
+    "start:server": "node server.js",
+    "start:both": "concurrently \"npm run start:client\" \"npm run start:server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

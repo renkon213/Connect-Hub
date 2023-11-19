@@ -1,27 +1,27 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const userController = require('../controllers/userController');
+const userController = require("../controllers/userController");
 
 // Define routes and associate them with their respective controller methods
 
 //Create user
-router.post('/', userController.createUser);
+router.post("/api/users", userController.createUser);
 
 //Get all users
-router.get('/', userController.findAll);
+router.get("/api/users", userController.findAll);
 
 // Find user by ID
-router.get('/:id', userController.findByID);
+router.get("/api/users:id", userController.findByID);
 
 // Update user
-router.put('/:id', userController.updateUser);
+router.put("/api/users:id", userController.updateUser);
 
 // Delete user
-router.delete('/:id', userController.deleteUser);
+router.delete("/api/users:id", userController.deleteUser);
 
 // User authentication routes
-router.post('/signin', userController.userSignIn);
+router.post("/signin", userController.userSignIn);
 
-router.get('/signout', userController.userSignOut);
+router.get("/signout", userController.userSignOut);
 
 module.exports = router;
